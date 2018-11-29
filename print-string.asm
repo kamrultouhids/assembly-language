@@ -1,0 +1,18 @@
+
+ORG 100H
+
+.MODEL SMALL
+.DATA
+MSG DB 'Hello World.$'
+.CODE 
+MAIN PROC
+	
+	LEA DX , MSG
+	MOV AH , 9
+	INT 21H
+	
+	MOV AH , 4CH
+	INT 21H
+	
+	MAIN ENDP
+	END MAIN
